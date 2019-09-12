@@ -86,8 +86,14 @@ set tm=500
 " Enable syntax highlighting
 syntax enable
 
-colorscheme blackdust
+colorscheme dracula
 set background=dark
+
+" Colorscheme for vimdiif
+" https://stackoverflow.com/questions/2019281/load-different-colorscheme-when-using-vimdiff
+if &diff
+    colorscheme dracula
+endif
 
 " Set extra options when running in GUI mode
 if has("gui_running")
